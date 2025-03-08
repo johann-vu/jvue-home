@@ -57,7 +57,7 @@ a {
 }
 
 @media screen and (max-width: 600px) {
-	.wrapper {
+	.container {
 		flex-direction: column-reverse;
 		gap: 30px;
 	}
