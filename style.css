@@ -31,13 +31,7 @@ a {
 }
 
 @media screen and (max-width: 600px) {
-	body {
-		align-items: start;
-		height: 100vh;
-	}
-
 	.wrapper {
-		margin: 100px 25px;
 		flex-direction: column-reverse;
 		gap: 30px;
 	}
