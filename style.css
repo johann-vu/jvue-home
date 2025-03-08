@@ -1,7 +1,5 @@
 :root {
 	--background-color: white;
-	--background-gradient-start: rgba(255, 0, 150, 0.1);
-	--background-gradient-end: rgba(0, 204, 255, 0.1);
 	--text-color: black;
 }
 
@@ -17,9 +15,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-	background: linear-gradient(135deg, var(--background-gradient-start), var(--background-gradient-end));
 	background-color: var(--background-color);
-	backdrop-filter: blur(10px);
 }
 
 
