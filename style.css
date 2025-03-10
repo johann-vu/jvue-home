@@ -18,11 +18,7 @@ body {
 }
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
 	font-family: "Playfair Display", serif;
 }
 
@@ -110,6 +106,22 @@ a {
 .image {
 	height: 120px;
 	width: 120px;
+}
+
+/* Skills */
+
+
+.skills__list {
+	padding: 0 10px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 25px;
+}
+
+.skills__item {
+	display: flex;
+	align-items: center;
+	gap: 15px;
 }
 
 /* Projects */
