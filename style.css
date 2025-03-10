@@ -34,11 +34,25 @@ a {
 .wrapper {
 	max-width: 500px;
 	width: 100%;
-	margin: 100px auto;
+	margin: 10px auto;
 }
 
 .spacer {
 	flex: 1;
+}
+
+.header {
+	max-width: 500px;
+	width: 100%;
+	margin: 10px auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.header img {
+	height: 50px;
+	width: 50px;
 }
 
 @media screen and (max-width: 600px) {

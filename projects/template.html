@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{.title}}</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+	<div class="header">
+		<img src="/assets/image.png" alt="">
+	</div>
+    <div class="wrapper">
+      <div class="container">
+        <h1 id="projects">{{.title}}</h1>
+
+        <img
+          src="{{.image}}"
+          style="width: 100%"
+        />
+        <div class="projects__tag-container">
+			{{range .tags}}
+			  <span class="projects__tag">{{.}}</span>
+			{{end}}
+        </div>
+        {{range .paragraphs}}
+		<p>{{.}}</p>
+		{{end}}
+        <h3>Weiterführende Links</h3>
+		<ul class="links-list"></ul>
+		{{range .links}}
+		  <li><a href="{{.url}}" target="_blank">{{.text}}</a></li>
+		{{end}}
+		</ul>
+      </div>
+    </div>
+  </body>
+</html>
