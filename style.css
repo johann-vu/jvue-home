@@ -49,6 +49,10 @@ a {
 		--background-color: black;
 		--text-color: white;
 	}
+
+	.skills__item img {
+		filter: invert(1);
+	}
 }
 
 /* HERO */
