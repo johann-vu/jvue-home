@@ -146,7 +146,7 @@ a {
 	gap: 10px;
 	width: 100%;
 	flex-wrap: wrap;
-	padding: 5px 0;
+	padding-bottom: 5px;
 }
 
 .projects__tag {
