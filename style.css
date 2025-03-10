@@ -28,6 +28,9 @@ a {
 
 
 .wrapper {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 10px;
 	max-width: 500px;
 	width: 100%;
 	margin: 100px auto;
@@ -143,6 +146,7 @@ a {
 	gap: 10px;
 	width: 100%;
 	flex-wrap: wrap;
+	padding: 5px 0;
 }
 
 .projects__tag {
