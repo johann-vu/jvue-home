@@ -1,219 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Johann</title>
-    <link rel="icon" href="assets/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="container hero-container">
-        <div class="text-container">
-          <h2>Hi, ich bin Johann <span class="hand">👋</span></h2>
-          <p>
-            Ich bin Software-Entwickler und studiere Wirtschaftsinformatik an
-            der FH Münster. Wenn ich nicht gerade programmiere, lese ich gerne
-            oder genieße einen guten Kaffee.
-          </p>
-        </div>
-        <img
-          class="image"
-          src="assets/image.png"
-          alt="Ein lächelnder Computer"
-        />
-      </div>
-      <div class="container">
-        <h2 id="projects">Projekte</h2>
-        <h3>Online Möbellager</h3>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Johann</title>
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="6582a189-3897-4cc4-a288-920c8466a5a6"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container hero-container">
+      <div class="text-container">
+        <h2>Hi, ich bin Johann <span class="hand">👋</span></h2>
         <p>
-          Mit dem Online-Möbellager können Spendenangebote für Möbel und
-          Fahrräder online eingestellt werden. Das Projekt wurde in
-          Zusammenarbeit mit der Kirchengemeinde St. Peter und Paul in Velen
-          umgesetzt.
-        </p>
-        <div class="projects__tag-container">
-          <span class="projects__tag">#Pocketbase</span>
-          <span class="projects__tag">#Angular</span>
-          <span class="projects__tag">#DevOps</span>
-          <div class="spacer"></div>
-          <a href="https://online-moebellager.de">Zum Projekt</a>
-        </div>
-        <h3>Ticketsystem</h3>
-        <p>
-          Im Rahmen des Forschungs- und Entwicklungsprojektes an der FH Münster
-          wurde ein Ticketsystem entwickelt. wurde ein Ticketsystem entwickelt.
-          Das System wurde mit Flutter umgesetzt und sowohl als App als auch als
-          Website zur Verfügung gestellt.
-        </p>
-        <div class="projects__tag-container">
-          <span class="projects__tag">#Pocketbase</span>
-          <span class="projects__tag">#Flutter</span>
-          <span class="projects__tag">#Studium</span>
-        </div>
-        <h3>Eventinator</h3>
-        <p>
-          Im Rahmen unseres Studiums an der FH Münster haben wir eine App für
-          die Organisation von von privaten Veranstaltungen entwickelt.
-          Kernfunktionen sind die Teilnahme an Abstimmungen oder die Übernahme
-          von Aufgaben.
-        </p>
-        <div class="projects__tag-container">
-          <span class="projects__tag">#Lit</span>
-          <span class="projects__tag">#Capacitor</span>
-          <span class="projects__tag">#Ionic</span>
-          <span class="projects__tag">#Studium</span>
-        </div>
-        <h3>Your Music Spotlight</h3>
-        <p>
-          Your Music Spotlight ist eine Webanwendung, die auf Basis der Spotify
-          API erstellt wurde. Sie zeigt Dir deine Lieblingskünstler und -songs.
-        </p>
-        <div class="projects__tag-container">
-          <span class="projects__tag">#VueJS</span>
-          <span class="projects__tag">#SpotifyAPI</span>
-          <div class="spacer"></div>
-          <a href="https://johann-vu.github.io/music-spotlight/">Zum Projekt</a>
-        </div>
-      </div>
-      <div class="container">
-        <h2 id="skills">Skills</h2>
-        <h3>Sprachen</h3>
-        <ul class="skills__list">
-          <li class="skills__item">
-            <img src="/assets/icons/go.svg" />
-            Go
-          </li>
-          <li class="skills__item">
-            <img src="/assets/icons/javascript.svg" />
-            JavaScript
-          </li>
-          <li class="skills__item">
-            <img src="/assets/icons/typescript.svg" />
-            TypeScript
-          </li>
-          <li class="skills__item">
-            <img src="/assets/icons/dart.svg" />
-            Dart
-          </li>
-          <li class="skills__item">
-            <img src="/assets/icons/python.svg" /> Python
-          </li>
-          <li class="skills__item">
-            <img src="/assets/icons/html5.svg" /> HTML
-          </li>
-          <li class="skills__item"><img src="/assets/icons/css.svg" /> CSS</li>
-          <li class="skills__item">
-            <img src="/assets/icons/openjdk.svg" /> Java
-          </li>
-        </ul>
-        <h3>Frameworks und Libraries</h3>
-        <ul class="skills__list">
-          <li class="skills__item">
-            <img src="/assets/icons/angular.svg" /> Angular
-          </li>
-          <li class="skills__item">
-            <img src="/assets/icons/vuedotjs.svg" />
-            Vue.js
-          </li>
-          <li class="skills__item"><img src="/assets/icons/lit.svg" /> Lit</li>
-          <li class="skills__item">
-            <img src="/assets/icons/flutter.svg" /> Flutter
-          </li>
-          <li class="skills__item">
-            <img src="/assets/icons/pocketbase.svg" />
-            Pocketbase
-          </li>
-        </ul>
-        <h3>Tools und Systeme</h3>
-        <ul class="skills__list">
-          <li class="skills__item">
-            <img src="/assets/icons/gitlab.svg" /> Gitlab CI/CD
-          </li>
-          <li class="skills__item">
-            <img src="/assets/icons/docker.svg" /> Docker
-          </li>
-          <li class="skills__item">
-            <img src="/assets/icons/figma.svg" />
-            Figma
-          </li>
-          <li class="skills__item">
-            <img src="/assets/icons/umami.svg" /> Umami
-          </li>
-          <li class="skills__item">
-            <img src="/assets/icons/apachenifi.svg" /> Apache NiFi
-          </li>
-        </ul>
-      </div>
-      <div class="container">
-        <h2>Lieblingsdinge</h2>
-        <p>
-          Mein Lieblingscafé in Münster ist die
-          <a
-            href="https://www.kaffeegiesserei.de"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Kaffeegießerei</a
-          >. Und meine Lieblingsprogrammiersprache ist
-          <a href="https://go.dev" target="_blank" rel="noopener noreferrer"
-            >Go</a
-          >. Ich lese gerne Bücher von
-          <a
-            href="https://app.thestorygraph.com/books/cbe75aae-dcbc-462d-8b5e-323811cac746"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Blake Crouch</a
-          >
-          und höre gerne Musik von
-          <a
-            href="https://open.spotify.com/intl-de/artist/2f7f3AmL16mmiAmYnxmmfx"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Provinz</a
-          >. Ich finde den
-          <a
-            href="https://youtu.be/eilcT2ufpKg"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Eurovision Song Contest</a
-          >
-          toll und mag den YouTube Kanal von
-          <a
-            href="https://youtube.com/@scruffymusic"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Scruffy</a
-          >.
+          Ich bin Software-Entwickler und studiere Wirtschaftsinformatik an
+          der FH Münster. Wenn ich nicht gerade programmiere, lese ich gerne
+          oder genieße einen guten Kaffee.
         </p>
       </div>
-      <div class="container">
-        Schreib mir doch gerne eine Nachricht auf
-        <a
-          href="https://linkedin.com/in/jvue"
-          target="_blank"
-          rel="noopener noreferrer"
-          >LinkedIn</a
-        >
-        oder
-        <a
-          href="https://www.instagram.com/johann_vu/"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Instagram</a
-        >. Oder schreib mir eine
-        <a href="mailto:mitose_eisenbahn.1c@icloud.com">Mail</a>. Ich freue mich
-        von Dir zu hören!
+      <img class="image" src="assets/image.png" alt="Ein lächelnder Computer" />
+    </div>
+    <div class="container">
+      <h2 id="projects">Projekte</h2>
+      <h3>Online Möbellager</h3>
+      <p>
+        Mit dem Online-Möbellager können Spendenangebote für Möbel und
+        Fahrräder online eingestellt werden. Das Projekt wurde in
+        Zusammenarbeit mit der Kirchengemeinde St. Peter und Paul in Velen
+        umgesetzt.
+      </p>
+      <div class="projects__tag-container">
+        <span class="projects__tag">#Pocketbase</span>
+        <span class="projects__tag">#Angular</span>
+        <span class="projects__tag">#DevOps</span>
+        <div class="spacer"></div>
+        <a href="https://online-moebellager.de">Zum Projekt</a>
+      </div>
+      <h3>Ticketsystem</h3>
+      <p>
+        Im Rahmen des Forschungs- und Entwicklungsprojektes an der FH Münster
+        wurde ein Ticketsystem entwickelt. wurde ein Ticketsystem entwickelt.
+        Das System wurde mit Flutter umgesetzt und sowohl als App als auch als
+        Website zur Verfügung gestellt.
+      </p>
+      <div class="projects__tag-container">
+        <span class="projects__tag">#Pocketbase</span>
+        <span class="projects__tag">#Flutter</span>
+        <span class="projects__tag">#Studium</span>
+      </div>
+      <h3>Eventinator</h3>
+      <p>
+        Im Rahmen unseres Studiums an der FH Münster haben wir eine App für
+        die Organisation von von privaten Veranstaltungen entwickelt.
+        Kernfunktionen sind die Teilnahme an Abstimmungen oder die Übernahme
+        von Aufgaben.
+      </p>
+      <div class="projects__tag-container">
+        <span class="projects__tag">#Lit</span>
+        <span class="projects__tag">#Capacitor</span>
+        <span class="projects__tag">#Ionic</span>
+        <span class="projects__tag">#Studium</span>
+      </div>
+      <h3>Your Music Spotlight</h3>
+      <p>
+        Your Music Spotlight ist eine Webanwendung, die auf Basis der Spotify
+        API erstellt wurde. Sie zeigt Dir deine Lieblingskünstler und -songs.
+      </p>
+      <div class="projects__tag-container">
+        <span class="projects__tag">#VueJS</span>
+        <span class="projects__tag">#SpotifyAPI</span>
+        <div class="spacer"></div>
+        <a href="https://johann-vu.github.io/music-spotlight/">Zum Projekt</a>
       </div>
     </div>
-    <div class="footer">
-      <a href="/impressum.html">Impressum</a>
+    <div class="container">
+      <h2 id="skills">Skills</h2>
+      <h3>Sprachen</h3>
+      <ul class="skills__list">
+        <li class="skills__item">
+          <img src="/assets/icons/go.svg" />
+          Go
+        </li>
+        <li class="skills__item">
+          <img src="/assets/icons/javascript.svg" />
+          JavaScript
+        </li>
+        <li class="skills__item">
+          <img src="/assets/icons/typescript.svg" />
+          TypeScript
+        </li>
+        <li class="skills__item">
+          <img src="/assets/icons/dart.svg" />
+          Dart
+        </li>
+        <li class="skills__item">
+          <img src="/assets/icons/python.svg" /> Python
+        </li>
+        <li class="skills__item">
+          <img src="/assets/icons/html5.svg" /> HTML
+        </li>
+        <li class="skills__item"><img src="/assets/icons/css.svg" /> CSS</li>
+        <li class="skills__item">
+          <img src="/assets/icons/openjdk.svg" /> Java
+        </li>
+      </ul>
+      <h3>Frameworks und Libraries</h3>
+      <ul class="skills__list">
+        <li class="skills__item">
+          <img src="/assets/icons/angular.svg" /> Angular
+        </li>
+        <li class="skills__item">
+          <img src="/assets/icons/vuedotjs.svg" />
+          Vue.js
+        </li>
+        <li class="skills__item"><img src="/assets/icons/lit.svg" /> Lit</li>
+        <li class="skills__item">
+          <img src="/assets/icons/flutter.svg" /> Flutter
+        </li>
+        <li class="skills__item">
+          <img src="/assets/icons/pocketbase.svg" />
+          Pocketbase
+        </li>
+      </ul>
+      <h3>Tools und Systeme</h3>
+      <ul class="skills__list">
+        <li class="skills__item">
+          <img src="/assets/icons/gitlab.svg" /> Gitlab CI/CD
+        </li>
+        <li class="skills__item">
+          <img src="/assets/icons/docker.svg" /> Docker
+        </li>
+        <li class="skills__item">
+          <img src="/assets/icons/figma.svg" />
+          Figma
+        </li>
+        <li class="skills__item">
+          <img src="/assets/icons/umami.svg" /> Umami
+        </li>
+        <li class="skills__item">
+          <img src="/assets/icons/apachenifi.svg" /> Apache NiFi
+        </li>
+      </ul>
     </div>
-  </body>
+    <div class="container">
+      <h2>Lieblingsdinge</h2>
+      <p>
+        Mein Lieblingscafé in Münster ist die
+        <a href="https://www.kaffeegiesserei.de" target="_blank" rel="noopener noreferrer">Kaffeegießerei</a>. Und meine
+        Lieblingsprogrammiersprache ist
+        <a href="https://go.dev" target="_blank" rel="noopener noreferrer">Go</a>. Ich lese gerne Bücher von
+        <a href="https://app.thestorygraph.com/books/cbe75aae-dcbc-462d-8b5e-323811cac746" target="_blank"
+          rel="noopener noreferrer">Blake Crouch</a>
+        und höre gerne Musik von
+        <a href="https://open.spotify.com/intl-de/artist/2f7f3AmL16mmiAmYnxmmfx" target="_blank"
+          rel="noopener noreferrer">Provinz</a>. Ich finde den
+        <a href="https://youtu.be/eilcT2ufpKg" target="_blank" rel="noopener noreferrer">Eurovision Song Contest</a>
+        toll und mag den YouTube Kanal von
+        <a href="https://youtube.com/@scruffymusic" target="_blank" rel="noopener noreferrer">Scruffy</a>.
+      </p>
+    </div>
+    <div class="container">
+      Schreib mir doch gerne eine Nachricht auf
+      <a href="https://linkedin.com/in/jvue" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      oder
+      <a href="https://www.instagram.com/johann_vu/" target="_blank" rel="noopener noreferrer">Instagram</a>. Oder
+      schreib mir eine
+      <a href="mailto:mitose_eisenbahn.1c@icloud.com">Mail</a>. Ich freue mich
+      von Dir zu hören!
+    </div>
+  </div>
+  <div class="footer">
+    <a href="/impressum.html">Impressum</a>
+  </div>
+</body>
+
 </html>
