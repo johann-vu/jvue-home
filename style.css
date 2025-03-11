@@ -132,7 +132,7 @@ a {
 }
 
 .skills__item img {
-	max-height: 2rem;
+	max-height: 1.5rem;
 }
 
 @media screen and (max-width: 500px) {
