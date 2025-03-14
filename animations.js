@@ -1,28 +1,52 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const sections = document.querySelectorAll(".section");
+const sectionSelector = ".section";
+const visibleClassname = "visible";
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => {
-            entry.target.classList.add("visible");
-          }, entry.target.dataset.delay || 0);
-          observer.unobserve(entry.target); // Beobachtung beenden
-        }
-      });
-    },
-    { threshold: 0.2 }
-  );
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll(sectionSelector);
+
+  if (preferesReducedMotion()) {
+    showSections(sections);
+    return;
+  }
+
+  const observer = new IntersectionObserver(handleIntersectionChange, {
+    threshold: 0.2,
+  });
 
   sections.forEach((section, index) => {
-    if (section.getBoundingClientRect().top < window.innerHeight) {
-      // Direkt sichtbare Elemente mit Verzögerung einblenden
-      setTimeout(() => {
-        section.classList.add("visible");
-      }, index * 150);
+    if (sectionIsVisible(section)) {
+      triggerAnimation(section, index);
     } else {
       observer.observe(section);
     }
   });
 });
+
+function sectionIsVisible(section) {
+  return section.getBoundingClientRect().top < window.innerHeight;
+}
+
+function handleIntersectionChange(entries) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+    triggerAnimation(entry.target);
+    observer.unobserve(entry.target);
+  });
+}
+
+function triggerAnimation(section, index = 0) {
+  setTimeout(() => {
+    section.classList.add(visibleClassname);
+  }, index * 150);
+}
+
+function showSections(sections) {
+  sections.forEach((section) => {
+    section.style.opacity = "1";
+    section.style.transform = "none";
+  });
+}
+
+function preferesReducedMotion() {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
