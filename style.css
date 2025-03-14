@@ -51,13 +51,6 @@ a {
 	flex: 1;
 }
 
-@media screen and (max-width: 600px) {
-	.container {
-		flex-direction: column-reverse;
-		gap: 30px;
-	}
-}
-
 @media (prefers-color-scheme: dark) {
 	:root {
 		--background-color: black;
@@ -73,6 +66,7 @@ a {
 
 .hero-container {
 	display: flex;
+	flex-direction: row-reverse;
 	align-items: center;
 	justify-content: space-between;
 	gap: 50px;
@@ -124,6 +118,13 @@ a {
 .image {
 	height: 120px;
 	width: 120px;
+}
+
+@media screen and (max-width: 600px) {
+	.hero-container {
+		flex-direction: column;
+		gap: 30px;
+	}
 }
 
 /* Skills */
