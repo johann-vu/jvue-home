@@ -9,6 +9,14 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
+  function handleIntersectionChange(entries) {
+	entries.forEach((entry) => {
+	  if (!entry.isIntersecting) return;
+	  triggerAnimation(entry.target);
+	  observer.unobserve(entry.target);
+	});
+  }
+
   const observer = new IntersectionObserver(handleIntersectionChange, {
     threshold: 0.2,
   });
@@ -24,14 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function sectionIsVisible(section) {
   return section.getBoundingClientRect().top < window.innerHeight;
-}
-
-function handleIntersectionChange(entries) {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) return;
-    triggerAnimation(entry.target);
-    observer.unobserve(entry.target);
-  });
 }
 
 function triggerAnimation(section, index = 0) {
