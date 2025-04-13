@@ -135,14 +135,17 @@ a {
 .skills__list {
 	padding: 0 10px 10px 10px;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	gap: 25px;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: 35px;
 }
 
 .skills__item {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
-	gap: 15px;
+	justify-content: center;
+	text-align: center;
+	gap: 10px;
 }
 
 .skills__item img {
@@ -151,7 +154,7 @@ a {
 
 @media screen and (max-width: 500px) {
 	.skills__list {
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr;
 		gap: 20px;
 	}
 }
