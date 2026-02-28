@@ -1,4 +1,4 @@
-import { LitElement, css, html } from "https://esm.sh/lit@3";
+import { LitElement, css, html } from "lit";
 
 class AppProjectCard extends LitElement {
   static properties = {
@@ -79,4 +79,4 @@ class AppProjectCard extends LitElement {
   }
 }
 
-customElements.define("app-project-card", AppProjectCard);
+customElements.define("jvue-project-card", AppProjectCard);

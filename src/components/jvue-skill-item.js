@@ -1,4 +1,4 @@
-import { LitElement, css, html } from "https://esm.sh/lit@3";
+import { LitElement, css, html } from "lit";
 
 class AppSkillItem extends LitElement {
   static properties = {
@@ -37,4 +37,4 @@ class AppSkillItem extends LitElement {
   }
 }
 
-customElements.define("app-skill-item", AppSkillItem);
+customElements.define("jvue-skill-item", AppSkillItem);

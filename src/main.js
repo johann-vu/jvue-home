@@ -1,3 +1,5 @@
-import "./components/app-project-card.js";
-import "./components/app-skills-group.js";
-import "./components/app-skill-item.js";
+import "../style.css";
+import "../animations.js";
+import "./components/jvue-project-card.js";
+import "./components/jvue-skills-group.js";
+import "./components/jvue-skill-item.js";
