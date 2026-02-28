@@ -1,6 +1,9 @@
 import { LitElement, css, html } from "lit";
 
 class AppSkillItem extends LitElement {
+  icon = "";
+  label = "";
+
   static properties = {
     icon: { type: String },
     label: { type: String },

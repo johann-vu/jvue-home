@@ -1,12 +1,17 @@
 import { LitElement, css, html } from "lit";
+import { t } from "../scripts/translation";
 
 class AppProjectCard extends LitElement {
+  title = "";
+  description = "";
+  tags = "";
+  href = "";
+
   static properties = {
     title: { type: String },
     description: { type: String },
     tags: { type: String },
     href: { type: String },
-    linkLabel: { type: String, attribute: "link-label" },
   };
 
   static styles = css`
@@ -55,7 +60,7 @@ class AppProjectCard extends LitElement {
   `;
 
   renderTags() {
-    const tags = (this.tags || "")
+    const tags = this.tags
       .split(",")
       .map((tag) => tag.trim())
       .filter(Boolean);
@@ -65,7 +70,7 @@ class AppProjectCard extends LitElement {
 
   renderLink() {
     if (!this.href) return null;
-    return html`<a href=${this.href}>${this.linkLabel || "Zum Projekt"}</a>`;
+    return html`<a href=${this.href}>${t("project.link")}</a>`;
   }
 
   render() {

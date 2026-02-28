@@ -1,8 +1,12 @@
 import { LitElement, css, html } from "lit";
 
 class AppSkillsGroup extends LitElement {
+  title = "";
+  columns = 4;
+
   static properties = {
     title: { type: String },
+    columns: { type: Number },
   };
 
   static styles = css`
@@ -17,7 +21,6 @@ class AppSkillsGroup extends LitElement {
       margin: 0;
       padding: 0 10px 10px 10px;
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
       gap: 35px;
     }
 
@@ -32,7 +35,12 @@ class AppSkillsGroup extends LitElement {
   render() {
     return html`
       <h3>${this.title}</h3>
-      <div class="skills-list" role="list" aria-label=${this.title}>
+      <div
+        class="skills-list"
+        role="list"
+        aria-label=${this.title}
+        style="grid-template-columns: repeat(${this.columns || 4}, 1fr);"
+      >
         <slot></slot>
       </div>
     `;

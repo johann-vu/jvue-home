@@ -1,24 +1,30 @@
+import { unsafeHTML } from "lit/directives/unsafe-html.js";
 import de from "./locales/de.json";
 import en from "./locales/en.json";
 
-const translations = { de, en };
-const DEFAULT_LOCALE = "de";
+type TranslationMap = Record<string, string>;
+type Locale = "de" | "en";
+type RichParamValue = string | number | boolean | null | undefined | unknown;
+type Params = Record<string, RichParamValue>;
 
-function normalizeLocale(locale) {
+const translations: Record<Locale, TranslationMap> = { de, en };
+const DEFAULT_LOCALE: Locale = "de";
+
+function normalizeLocale(locale: string | null | undefined): Locale | null {
   if (!locale || typeof locale !== "string") return null;
 
   const cleaned = locale.trim().toLowerCase();
   if (!cleaned) return null;
 
-  if (translations[cleaned]) return cleaned;
+  if (cleaned in translations) return cleaned as Locale;
 
   const languageCode = cleaned.split(/[-_]/)[0];
-  if (translations[languageCode]) return languageCode;
+  if (languageCode in translations) return languageCode as Locale;
 
   return null;
 }
 
-function detectLocale() {
+function detectLocale(): Locale {
   if (typeof navigator === "undefined") return DEFAULT_LOCALE;
 
   const preferredLocales = Array.isArray(navigator.languages)
@@ -35,41 +41,45 @@ function detectLocale() {
   return DEFAULT_LOCALE;
 }
 
-let currentLocale = detectLocale();
+let currentLocale: Locale = detectLocale();
 
-export function getLocale() {
+export function getLocale(): Locale {
   return currentLocale;
 }
 
-export function setLocale(locale) {
+export function setLocale(locale: string): Locale {
   const normalized = normalizeLocale(locale);
   if (normalized) currentLocale = normalized;
   return currentLocale;
 }
 
-export function t(key, locale = currentLocale) {
+export function t(key: string, locale: string = currentLocale): string {
   const normalized = normalizeLocale(locale) ?? DEFAULT_LOCALE;
   const value = translations[normalized]?.[key];
   return typeof value === "string" ? value : key;
 }
 
-export function formatMessage(message, params = {}) {
+export function formatMessage(message: unknown, params: Params = {}): string {
   if (typeof message !== "string") return String(message ?? "");
 
-  return message.replace(/\{(\w+)\}/g, (match, paramName) => {
+  return message.replace(/\{(\w+)\}/g, (match: string, paramName: string) => {
     const value = params[paramName];
     return value == null ? match : String(value);
   });
 }
 
-export function tf(key, params = {}, locale = currentLocale) {
+export function tf(
+  key: string,
+  params: Params = {},
+  locale: string = currentLocale,
+): string {
   return formatMessage(t(key, locale), params);
 }
 
-export function formatMessageParts(message, params = {}) {
+export function formatMessageParts(message: unknown, params: Params = {}): unknown[] {
   if (typeof message !== "string") return [String(message ?? "")];
 
-  const parts = [];
+  const parts: unknown[] = [];
   const regex = /\{(\w+)\}/g;
   let cursor = 0;
   let match = regex.exec(message);
@@ -83,7 +93,7 @@ export function formatMessageParts(message, params = {}) {
       parts.push(message.slice(cursor, matchStart));
     }
 
-    if (Object.hasOwn(params, paramName)) {
+    if (Object.prototype.hasOwnProperty.call(params, paramName)) {
       parts.push(params[paramName]);
     } else {
       parts.push(fullMatch);
@@ -100,11 +110,15 @@ export function formatMessageParts(message, params = {}) {
   return parts;
 }
 
-export function tr(key, params = {}, locale = currentLocale) {
+export function tr(
+  key: string,
+  params: Params = {},
+  locale: string = currentLocale,
+): unknown[] {
   return formatMessageParts(t(key, locale), params);
 }
 
-export function th(key, params = {}, locale = currentLocale) {
+export function th(key: string, params: Params = {}, locale: string = currentLocale) {
   const message = tf(key, params, locale);
   return unsafeHTML(message);
 }
