@@ -18,6 +18,7 @@
       data-website-id="6582a189-3897-4cc4-a288-920c8466a5a6"
     ></script>
     <script src="animations.js" defer></script>
+    <script type="module" src="src/main.js"></script>
     <noscript>
       <style>
         .section {
@@ -48,139 +49,72 @@
       </div>
       <div class="container">
         <h2 id="projects" class="section">Projekte</h2>
-        <div class="section">
-          <h3>Online Möbellager</h3>
-          <p>
-            Mit dem Online-Möbellager können Spendenangebote für Möbel und
-            Fahrräder online eingestellt werden. Das Projekt wurde in
-            Zusammenarbeit mit der Kirchengemeinde St. Peter und Paul in Velen
-            umgesetzt.
-          </p>
-          <div class="projects__tag-container">
-            <span class="projects__tag">#Pocketbase</span>
-            <span class="projects__tag">#Angular</span>
-            <span class="projects__tag">#DevOps</span>
-            <div class="spacer"></div>
-            <a href="https://online-moebellager.de">Zum Projekt</a>
-          </div>
-        </div>
-        <div class="section">
-          <h3>Ticketsystem</h3>
-          <p>
-            Im Rahmen des Forschungs- und Entwicklungsprojektes an der FH
-            Münster wurde ein Ticketsystem entwickelt. Das System wurde mit
-            Flutter umgesetzt und sowohl als App als auch als Website zur
-            Verfügung gestellt.
-          </p>
-          <div class="projects__tag-container">
-            <span class="projects__tag">#Pocketbase</span>
-            <span class="projects__tag">#Flutter</span>
-            <span class="projects__tag">#Studium</span>
-          </div>
-        </div>
-        <div class="section">
-          <h3>Eventinator</h3>
-          <p>
-            Im Rahmen unseres Studiums an der FH Münster haben wir eine App für
-            die Organisation von von privaten Veranstaltungen entwickelt.
-            Kernfunktionen sind die Teilnahme an Abstimmungen oder die Übernahme
-            von Aufgaben.
-          </p>
-          <div class="projects__tag-container">
-            <span class="projects__tag">#Lit</span>
-            <span class="projects__tag">#Capacitor</span>
-            <span class="projects__tag">#Ionic</span>
-            <span class="projects__tag">#Studium</span>
-          </div>
-        </div>
-        <div class="section">
-          <h3>Your Music Spotlight</h3>
-          <p>
-            Your Music Spotlight ist eine Webanwendung, die auf Basis der
-            Spotify API erstellt wurde. Sie zeigt Dir deine Lieblingskünstler
-            und -songs.
-          </p>
-          <div class="projects__tag-container">
-            <span class="projects__tag">#VueJS</span>
-            <span class="projects__tag">#SpotifyAPI</span>
-            <div class="spacer"></div>
-            <a href="https://johann-vu.github.io/music-spotlight/"
-              >Zum Projekt</a
-            >
-          </div>
-        </div>
+        <app-project-card
+          class="section"
+          title="Online Möbellager"
+          description="Mit dem Online-Möbellager können Spendenangebote für Möbel und Fahrräder online eingestellt werden. Das Projekt wurde in Zusammenarbeit mit der Kirchengemeinde St. Peter und Paul in Velen umgesetzt."
+          tags="#Pocketbase, #Angular, #DevOps"
+          href="https://online-moebellager.de"
+        ></app-project-card>
+        <app-project-card
+          class="section"
+          title="Ticketsystem"
+          description="Im Rahmen des Forschungs- und Entwicklungsprojektes an der FH Münster wurde ein Ticketsystem entwickelt. Das System wurde mit Flutter umgesetzt und sowohl als App als auch als Website zur Verfügung gestellt."
+          tags="#Pocketbase, #Flutter, #Studium"
+        ></app-project-card>
+        <app-project-card
+          class="section"
+          title="Eventinator"
+          description="Im Rahmen unseres Studiums an der FH Münster haben wir eine App für die Organisation von von privaten Veranstaltungen entwickelt. Kernfunktionen sind die Teilnahme an Abstimmungen oder die Übernahme von Aufgaben."
+          tags="#Lit, #Capacitor, #Ionic, #Studium"
+        ></app-project-card>
+        <app-project-card
+          class="section"
+          title="Your Music Spotlight"
+          description="Your Music Spotlight ist eine Webanwendung, die auf Basis der Spotify API erstellt wurde. Sie zeigt Dir deine Lieblingskünstler und -songs."
+          tags="#VueJS, #SpotifyAPI"
+          href="https://johann-vu.github.io/music-spotlight/"
+        ></app-project-card>
       </div>
       <div class="container">
         <h2 id="skills" class="section">Skills</h2>
-        <div class="section">
-          <h3>Sprachen</h3>
-          <ul class="skills__list">
-            <li class="skills__item">
-              <img src="/assets/icons/go.svg" />
-              Go
-            </li>
-            <li class="skills__item">
-              <img src="/assets/icons/javascript.svg" />
-              JavaScript
-            </li>
-            <li class="skills__item">
-              <img src="/assets/icons/typescript.svg" />
-              TypeScript
-            </li>
-            <li class="skills__item">
-              <img src="/assets/icons/html5.svg" /> HTML
-            </li>
-            <li class="skills__item">
-              <img src="/assets/icons/css.svg" /> CSS
-            </li>
-            <li class="skills__item">
-              <img src="/assets/icons/openjdk.svg" /> Java
-            </li>
-            <li class="skills__item">
-              <img src="/assets/icons/python.svg" /> Python
-            </li>
-          </ul>
-        </div>
-        <div class="section">
-          <h3>Frameworks und Libraries</h3>
-          <ul class="skills__list">
-            <li class="skills__item">
-              <img src="/assets/icons/angular.svg" /> Angular
-            </li>
-            <li class="skills__item">
-              <img src="/assets/icons/lit.svg" /> Lit
-            </li>
-            <li class="skills__item">
-              <img src="/assets/icons/pocketbase.svg" />
-              Pocketbase
-            </li>
-            <li class="skills__item">
-              <img src="/assets/icons/nicegui.svg" />
-              NiceGUI
-            </li>
-          </ul>
-        </div>
-        <div class="section">
-          <h3>Tools und Systeme</h3>
-          <ul class="skills__list">
-            <li class="skills__item">
-              <img src="/assets/icons/gitlab.svg" /> Gitlab CI/CD
-            </li>
-            <li class="skills__item">
-              <img src="/assets/icons/docker.svg" /> Docker
-            </li>
-            <li class="skills__item">
-              <img src="/assets/icons/figma.svg" />
-              Figma
-            </li>
-            <li class="skills__item">
-              <img src="/assets/icons/umami.svg" /> Umami
-            </li>
-            <li class="skills__item">
-              <img src="/assets/icons/apachenifi.svg" /> Apache NiFi
-            </li>
-          </ul>
-        </div>
+        <app-skills-group class="section" title="Sprachen">
+          <app-skill-item icon="/assets/icons/go.svg" label="Go"></app-skill-item>
+          <app-skill-item
+            icon="/assets/icons/javascript.svg"
+            label="JavaScript"
+          ></app-skill-item>
+          <app-skill-item
+            icon="/assets/icons/typescript.svg"
+            label="TypeScript"
+          ></app-skill-item>
+          <app-skill-item icon="/assets/icons/html5.svg" label="HTML"></app-skill-item>
+          <app-skill-item icon="/assets/icons/css.svg" label="CSS"></app-skill-item>
+          <app-skill-item icon="/assets/icons/openjdk.svg" label="Java"></app-skill-item>
+          <app-skill-item icon="/assets/icons/python.svg" label="Python"></app-skill-item>
+        </app-skills-group>
+        <app-skills-group class="section" title="Frameworks und Libraries">
+          <app-skill-item icon="/assets/icons/angular.svg" label="Angular"></app-skill-item>
+          <app-skill-item icon="/assets/icons/lit.svg" label="Lit"></app-skill-item>
+          <app-skill-item
+            icon="/assets/icons/pocketbase.svg"
+            label="Pocketbase"
+          ></app-skill-item>
+          <app-skill-item icon="/assets/icons/nicegui.svg" label="NiceGUI"></app-skill-item>
+        </app-skills-group>
+        <app-skills-group class="section" title="Tools und Systeme">
+          <app-skill-item
+            icon="/assets/icons/gitlab.svg"
+            label="Gitlab CI/CD"
+          ></app-skill-item>
+          <app-skill-item icon="/assets/icons/docker.svg" label="Docker"></app-skill-item>
+          <app-skill-item icon="/assets/icons/figma.svg" label="Figma"></app-skill-item>
+          <app-skill-item icon="/assets/icons/umami.svg" label="Umami"></app-skill-item>
+          <app-skill-item
+            icon="/assets/icons/apachenifi.svg"
+            label="Apache NiFi"
+          ></app-skill-item>
+        </app-skills-group>
       </div>
       <div class="container">
         <h2 class="section">Lieblingsdinge</h2>
