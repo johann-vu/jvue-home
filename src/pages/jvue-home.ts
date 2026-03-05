@@ -30,7 +30,7 @@ class AppHomePage extends LitElement {
         >Dark Matter</a
       >`,
       artist: html`<a
-        href="https://open.spotify.com/intl-de/artist/5KKpBU5eC2tJDzf0wmlRp2"
+        href="https://youtu.be/9ZKywzRJa_Y"
         target="_blank"
         rel="noopener noreferrer"
         >Raye</a
