@@ -30,10 +30,10 @@ class AppHomePage extends LitElement {
         >Dark Matter</a
       >`,
       artist: html`<a
-        href="https://open.spotify.com/intl-de/artist/2f7f3AmL16mmiAmYnxmmfx"
+        href="https://open.spotify.com/intl-de/artist/5KKpBU5eC2tJDzf0wmlRp2"
         target="_blank"
         rel="noopener noreferrer"
-        >Provinz</a
+        >Raye</a
       >`,
     });
   }
